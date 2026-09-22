@@ -1,0 +1,94 @@
+
+html {
+  --mobile-scale: 1.5;
+  --mobile-padding-offset: 0.8;
+  font-size: 16px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  color: rgba(0,0,0,.75);
+  background: #fff;
+  font-family: "Monument Grotesk Variable", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 425;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+a { color: inherit; text-decoration: none; }
+a:hover { opacity: .65; }
+.page { padding: 1rem; min-height: 100vh; }
+.header {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  gap: 0;
+  margin-bottom: 1.1rem;
+}
+.header-right { min-height: 1em; }
+hr {
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1);
+  margin: 0;
+}
+.projects { width: 100%; }
+.project-row {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  padding: .28rem 0 .34rem;
+  min-height: 1.6rem;
+}
+.project-row a { display: block; }
+.project-row .muted { opacity: .75; }
+.media-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #eee;
+  margin-bottom: 1rem;
+  filter: drop-shadow(.3rem .3rem .39rem #a1a1a1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0,0,0,.4);
+}
+.project-page .title {
+  font-size: 5rem;
+  line-height: .95;
+  color: rgba(0,0,0,.75);
+  margin: 2rem 0;
+}
+.project-page .meta {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 2rem;
+}
+.project-page .content { max-width: 100%; }
+.back { display: inline-block; margin-bottom: 2rem; }
+h1 {
+  font-size: 11rem;
+  line-height: 1;
+  font-weight: 500;
+  color: rgba(0,0,0,.75);
+  margin: 0;
+}
+.contact {
+  max-width: 40rem;
+  font-size: 2rem;
+  line-height: 1.05;
+  margin-top: 5rem;
+}
+@media (max-width: 700px) {
+  .page { padding: .8rem; }
+  .header {
+    grid-template-columns: 1fr;
+    gap: .5rem;
+  }
+  .project-row {
+    grid-template-columns: 1fr 2.4fr 1.6fr;
+    row-gap: .2rem;
+  }
+  .project-row .extra { display: none; }
+  .project-page .title { font-size: 2.6rem; }
+  .project-page .meta { grid-template-columns: 1fr 1fr; row-gap: .5rem; }
+  .contact { font-size: 1.5rem; margin-top: 3rem; }
+}
